@@ -7,6 +7,7 @@ var todays_date = get_date();
 
 $(document).ready(() => {
     
+	// register new account
     $('#reg_btn').on('click', () =>{
         let usern = $('#login_user').val();
         let pass = $('#login_pass').val();
@@ -29,6 +30,8 @@ $(document).ready(() => {
             }
         });
     });
+
+	// login
     
     $('#login_btn').on('click', () => {
 	
@@ -67,6 +70,8 @@ $(document).ready(() => {
     $("body").on("click", "#buy", function() {
         back_to_search_home();
     });
+	
+// get itineraries associeated with email in database
 
     $("body").on("click", "#get_itinerary", function() {
         let email = $("#itinerary_email").val().toLowerCase();
@@ -106,6 +111,8 @@ $(document).ready(() => {
 
         });
     });
+	
+// create new iternary in database
 
     $("body").on("click", "#create_itinerary", function() {
         if($("#create_itinerary_email").val() == "") {
@@ -135,6 +142,8 @@ $(document).ready(() => {
         }
     });
 
+// select itinerary to add tickets to
+
     $("body").on("click", ".add_tickets", function() {
         let get_id = this.id;
         let spl = get_id.split("_");
@@ -143,6 +152,7 @@ $(document).ready(() => {
         search_for_tickets();
     });
 
+// search for airlines as typing (on keyup)
 
     $("body").on("keyup", "#search_airline", function() {
         var str = $("#search_airline").val().toLowerCase();
@@ -160,6 +170,7 @@ $(document).ready(() => {
 
     });
 
+// view tickets in itinerary
     $("body").on("click", ".view_tickets", function() {
         let this_id = this.id;
         let spl = this_id.split("_");
@@ -179,6 +190,8 @@ $(document).ready(() => {
         });
         view_tickets_in_itinerary();
     });
+	
+// search for flights
 
     $("body").on("click", "#search_flights", function() {
         if($("#search_departure").val().toLowerCase() == "") {
@@ -196,6 +209,7 @@ $(document).ready(() => {
         back_to_search_home();
     });
 
+// cancel/delete ticket
     $("body").on("click", ".delete_ticket", function() {
         let this_id = this.id;
         let str = this_id.split("_");
@@ -210,14 +224,9 @@ $(document).ready(() => {
                 let div_id = $("#date_" + t_id).text().toLowerCase();
                 let div_spl = div_id.split(": ");
                 let ticket_date = div_spl[1];
-       //         if(validate_date(unfix_date_format(ticket_date))) {
                     alert("Succesfully cancelled ticket");
                     $("#ticket_" + t_id).css("border", "none");
                     $("#ticket_" + t_id).remove();
-        //        }
-        //        else {
-        //            alert("Sorry, you can't cancel a ticket for a flight that's already happened");
-         //       }
                 
             },
             error: () => {
@@ -225,6 +234,8 @@ $(document).ready(() => {
             }
         });
     });
+	
+// display ticket info
 
     $("body").on("click", ".ticket_info", function() {
         let button_id = this.id;
@@ -265,11 +276,12 @@ $(document).ready(() => {
         }
         
         else {
-            alert("Can't get purchase info rip");
+            alert("Can't get purchase info");
         }
         
     });
 
+// buy ticket
     $("body").on("click", ".purchase", function() {
         seat_found = false;
         let this_id = this.id;
@@ -909,6 +921,8 @@ function capital_letter(str) {
     return str.join(" ");
 }
 
+// find the right seat 
+
 function buy_seat(seat_array, instance_id, instance_info, flight_id) {
     let date = $("#instance_" + flight_id).val();
  //   console.log(instance_info);
@@ -1064,6 +1078,8 @@ function randomNumber(max, min) {
     return Math.floor((Math.random() * max) + min);
 }
 
+// search for available flights
+
 function execute_ticket_search() {
     $(".flights").empty();
     let search_depart_city = capital_letter($("#search_departure").val().toLowerCase());
@@ -1169,6 +1185,8 @@ function back_to_search_home() {
     idiv.append("<div><b>Enter an email and a name for your itinerary to create a new one:</b><br><br>Email: <input id='create_itinerary_email'><br>Itinerary Name: <input id='itinerary_info'><button id='create_itinerary'>Go!</button>");
 }
 
+// create div to display ticket info
+
 function tickets_div(tickets) {
   //  $("body").append("<div class='tix'></div>");
     for(i=0; i<tickets.length; i++) {  
@@ -1253,6 +1271,8 @@ function validate_date(date) {
 }
 }
 
+// get flight dates for specific flight
+
 function get_flight_dates(flight_id) {
     let dropdown = $("#instance_" + flight_id);
 
@@ -1294,6 +1314,7 @@ function search_for_tickets() {
 }
 
 
+// create divs to display flight info
 function flight_div(flight) {
     $.ajax(rootUrl + "instances?filter[flight_id]=" + flight.id,
     {
@@ -1345,6 +1366,8 @@ function flight_div(flight) {
 
 }
 
+// 3rd party weather api (openweather)
+
 function get_weather(city) {
     $.ajax(
     {
@@ -1357,7 +1380,7 @@ function get_weather(city) {
             $(".weather").append(response.main.temp + "&#176; F");
         },
         error: () => {
-            alert("sad");
+            alert("error");
         }
     });
 }
