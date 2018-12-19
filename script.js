@@ -360,7 +360,7 @@ $(document).ready(() => {
                         
                                                     },
                                                     error: () => {
-                                                        alert("fuck");
+                                                        alert("error");
                                                     }
                                 });
                                                 }
@@ -417,6 +417,7 @@ $(document).ready(() => {
     
 });
 
+// Build_edit() function was my partner's work, everything else is my code.
 
 function build_edit(){
     $("body").empty();
@@ -884,6 +885,7 @@ function build_edit(){
     });
                       
 }
+// end build function; JingJing's code starts again
 
 // credit to this function is from stackoverflow
 function make_confirmation_code() {
@@ -1411,7 +1413,7 @@ function get_airports_for_tickets(airport_id, ticket_id, x) {
             
         },
         error: () => {
-            alert("you suck");
+            alert("error");
         }
     });
 }
@@ -1435,7 +1437,7 @@ function get_airport_by_id(airport_id, flight_id, x) {
             
         },
         error: () => {
-            alert("you suck");
+            alert("error");
         }
     });
 }
