@@ -1,0 +1,308 @@
+div{
+    padding: 5px;
+    font-family: Helvetica, Arial, sans-serif;
+    text-align: center;
+    color:#f8f8f8;
+}
+
+.flight {
+    border: solid white;
+} 
+
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('https://fonts.googleapis.com/css?family=Roboto'); /*URL to font*/
+}
+
+input{
+    padding: 5px;
+  /*  width: 200px;*/
+    margin-right:10px;
+    
+}
+.formd{
+    background: transparent;
+    border: none;
+    color: #f8f8f8;
+    border-bottom: 2px solid white;
+    font-size: 2.5rem;
+}
+
+body{
+    font-family: 'Roboto';
+    font-size: 1rem;
+    background-size: cover;
+    background-image: 
+    linear-gradient(
+      rgba(24, 22, 161, 0.45), 
+      rgba(24, 22, 161, 0.45)
+    ),
+    url(UAE-AIRPORT.jpg);
+}
+
+.next{
+    display: inline-block;
+    border: none;
+	color: #f2f2f2;
+	padding: 10px;
+	font-size: 18px;
+	border-radius: 5px;
+	position: relative;
+    vertical-align: middle;
+    font-family: 'Roboto';
+    background-size: 100% 200%;
+    background-image: linear-gradient(to bottom,  #1816A1 50%, grey 50%);
+    transition: background-position 1s;
+}
+
+next:hover {
+	background-position: 0 -100%;
+}
+
+#login_div{
+    padding: 5px;
+    font-family: Helvetica, Arial, sans-serif;
+    text-align: center;
+    color:#f8f8f8;
+    font-family: 'Roboto';
+}
+
+#editdiv{
+    color: #f8f8f8;
+    font-family: 'Roboto';
+    padding-top: 15%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size: 2.5rem;
+}
+
+h1{
+    font-family: 'Roboto';
+    color: #f8f8f8;
+    font-size: 1.5rem;
+}
+/*ul{
+    color: #f8f8f8;
+}
+li{
+    color: #f8f8f8;
+}*/
+
+.ui-autocomplete{
+    background-color: #1816A1;
+    width: 200px;
+    list-style-type: none;
+    font-family: 'Roboto';
+    padding: none;
+}
+.ui-menu-item:hover{
+    background-color: #4B9CD3 ;
+    color: #f8f8f8;
+    font-family: 'Roboto';
+}
+
+.ui-autocomplete:hover{
+    background-color: #1e4584;
+    color: #f8f8f8;
+}
+
+#buy{
+    width:50%;
+    height: 200px;
+    margin-right:0px !important;
+    color: #f8f8f8 !important; 
+    font-family: 'Roboto';
+    font-size: 4rem;
+    border: solid 1px;
+    border-color: grey;
+}
+#buy1{
+    width:150px;
+    height: 40px;
+    color: #f8f8f8 !important; 
+    margin-left: 90%;
+    font-family: 'Roboto';
+}
+#edit{
+    width:50%;
+    margin-right:0px !important;
+    height: 200px;
+    color: #f8f8f8 !important;
+    font-family: 'Roboto';
+    font-size: 4rem;
+    border: solid 1px;
+    border-color: grey;
+}
+
+#edit3 {
+    width:150px;
+    height: 40px;
+    color: #f8f8f8 !important; 
+    margin-left: 88%;
+    font-family: 'Roboto';
+}
+
+.home {
+    width:150px;
+    height: 40px;
+    color: #f8f8f8 !important; 
+    margin-left: 88%;
+    font-family: 'Roboto';
+}
+
+#go1{
+    width:150px;
+    height:40px;
+    margin-left: auto;
+    margin-left: auto;
+}
+.go{
+    height:40px;
+    margin-left: auto;
+    margin-left: auto;  
+}
+
+#ddiv{
+    display: auto;
+    margin: 0 auto;
+}
+#adiv{
+    display: none;
+    margin: 0 auto;
+}
+#fldiv{
+    display: none;
+    margin: 0 auto;
+}
+#planediv{
+    display: none;
+    margin: 0 auto;
+}
+#dadiv{
+    display: none;
+    margin: 0 auto;
+}
+#ardiv{
+    display: none;
+    margin: 0 auto;
+}
+#airdiv{
+    display: none;
+    margin: 0 auto;
+}
+#subdiv{
+    display: none;
+    margin: 0 auto;
+}
+#datdiv{
+    display: none;
+    margin: 0 auto;
+}
+
+.delete_ticket {
+    font-size:14px !important;
+}
+
+button {
+	border: none;
+	color: #f2f2f2;
+    padding: 10px;
+    margin-right: 10px;
+	font-size: 18px;
+	border-radius: 5px;
+	position: relative;
+    vertical-align: middle;
+    font-family: 'Roboto';
+    background-size: 100% 200%;
+    background-image: linear-gradient(to bottom,  #1816A1 50%, grey 50%);
+    transition: background-position 1s;
+}
+button:hover {
+	background-position: 0 -100%;
+}
+
+.this_ticket {
+    border: solid white;
+    
+}
+div {
+    text-align:left;
+}
+
+#itin_h1 {
+    margin: auto;
+    width: 40%;
+    padding: 10px;
+}
+
+.itinerary_div {
+    margin: auto;
+    width: 40%;
+    border: solid white;
+    padding: 10px;
+    overflow: scroll;
+}
+.find_itinerary {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+.sorry {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+.tix {
+    margin: auto;
+    width: 50%;
+    border: solid white;
+    padding: 10px;
+    height: 600px;
+    font-family: 'Roboto';
+    overflow: scroll;
+}
+.tix_title {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+.header {
+    margin: auto;
+    width: 40%;
+    padding: 10px;
+}
+.flights {
+    margin: auto;
+    width: 40%;
+    padding: 10px;
+    height: 400px;
+    font-family: 'Roboto';
+    overflow: scroll;
+}
+#choose_plane {
+    margin-left: 10px;
+    font-size: 24px;
+    color: white;
+    background-color: transparent;
+}
+
+input {
+    background-color: transparent;
+    color: white;
+    border-color: white !important;
+}
+select {
+    background-color: transparent;
+    color: white;
+    border-color: white !important;
+}
+
+.title {
+    margin: auto;
+    width: 5%;
+    padding: 10px;
+}
